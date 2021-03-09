@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích hình tròn</title>
+</head>
+<body>
+<label for="r">Nhập bán kính hình tròn: </label>
+<input type="number" id="r" oninput="banKinh(this.value)" min="0">
+<p>Diện tích hình tròn là: <span id="result">0</span></p>
+<p>Chu vi hình tròn là:<span id="chu-vi">0</span></p>
+<script>
+    function banKinh(r) {
+        document.getElementById("result").innerText = "" + (r**2)*3.14;
+        if (r < 0){
+            document.getElementById("chu-vi").innerText = "Không được nhỏ hơn 0";
+        }else {
+            document.getElementById("chu-vi").innerText = "" + (r*2)*3.14;
+        }
+    }
+</script>
+
+
+
+<!--<script>
+&lt;!&ndash;khai báo&ndash;&gt;
+let R;
+//nhập dữ liệu vào
+let inputR= prompt("Bán kính hình tròn =");
+//chuyển chuyển dữ liệu thành số nguyên
+let r = parseInt(inputR);
+//tính
+let S=(r**2)*3.14;
+//hiển thị ra
+document.write("diện tích hình tròn là:" + S);
+</script>-->
+</body>
+</html>

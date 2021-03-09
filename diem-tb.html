@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính điểm trung bình</title>
+</head>
+<body>
+<script>
+<!--    khai báo 3 biến -->
+    let inputToan;
+    let inputLy
+    let inputHoa;
+    // khai báo biến
+    inputToan = prompt("Nhập điểm toán của bạn...");
+    inputLy = prompt("Nhập điểm lý của bạn...");
+    inputHoa = prompt( "Nhập điểm hoá của bạn...");
+    //chuyển kiểu dữ liệu sang số nguyên
+    let toan = parseInt(inputToan);
+    let ly = parseInt(inputLy);
+    let hoa = parseInt(inputHoa);
+    //tính
+    let area = (toan+ly+hoa)/3;
+    let tong =toan+ly+hoa;
+    //hiển thị kết quả ra
+    document.write("điểm trung bình là: " + area + "<br>");
+    document.write("tổng điểm là: " + tong);
+</script>
+</body>
+</html>

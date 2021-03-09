@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng toán tử</title>
+</head>
+<body>
+<script>
+<!--    khai báo biến-->
+    let inputWidth;
+    let inputHeight;
+    // sử dụng hàm prompt để lấy dữ liệu nhập vào
+inputWidth = +prompt("nhập chiều dài");
+inputHeight = +prompt("nhập chiều rộng");
+//dùng hàm pareelnt để chuyển kiểu dữ liệu chuỗi ( typeString) sang số nguyên
+let dai = parseInt(inputWidth);
+let rong = parseInt(inputHeight);
+//tính
+let area = dai * rong;
+//hiển thị
+document.write("diện tích :" + area);
+
+</script>
+</body>
+</html>
