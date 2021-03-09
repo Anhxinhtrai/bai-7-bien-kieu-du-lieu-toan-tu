@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quy đổi tiền</title>
+</head>
+<body>
+<label for="inputMoney"></label>
+<label for="fromCurrency"></label>
+<label for="toCurrency"></label>
+
+<input type="number" id="inputMoney" min="0">
+
+
+<select name="" id="fromCurrency">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+</select> sang
+<select name="" id="toCurrency" >
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select>
+<p id="result">bằng:</p>
+<script>
+
+    let inputMoney = document.getElementById('inputMoney');
+    inputMoney.onclick = convertMoney;
+    inputMoney.oninput = function () {
+        console.log(inputMoney.value)
+        let input = "" + inputMoney.value;
+        if (input.includes("-") && inputMoney.value === null){
+            inputMoney.value = 0;
+            alert("Không thể nhập giá trị nhỏ hơn 0!")
+        }
+    }
+    
+    
+    document.getElementById('toCurrency').onclick = convertMoney;
+    document.getElementById('fromCurrency').onclick = convertMoney;
+
+    function convertMoney() {
+        let inMoney = parseInt(document.getElementById("inputMoney").value);
+        let fromCur = parseInt(document.getElementById("fromCurrency").value);
+        let toCur = parseInt(document.getElementById("toCurrency").value);
+        let result = document.getElementById("result").textContent;
+
+        if (fromCur !== toCur) {
+            document.getElementById("result").innerText = "" + inMoney * toCur / fromCur;
+        } else {
+            document.getElementById("result").innerText = "" + inMoney;
+        }
+    }
+</script>
+</body>
+</html>

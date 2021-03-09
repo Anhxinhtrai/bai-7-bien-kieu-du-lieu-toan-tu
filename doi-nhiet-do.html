@@ -5,16 +5,15 @@
     <title>đổi độ C sang dộ F</title>
 </head>
 <body>
+<lable for="c">Nhập độ C:</lable>
+<input type="number" id="c" oninput="doC(this.value)">
+<p>độ F bằng: <span id="result">0</span></p>
 <script>
-   let C;
-//nhập dữ liệu
-let inputC= prompt("nhập độ C");
-//chuyển chuỗi dữ liệu sang số nguyên
-let c= parseInt(inputC);
-//tính
-let F=(9/5)*c+32;
-//hiển thị
-document.write("độ F bằng:" + F)
-    </script>
+    function doC(c){
+        document.getElementById("result").innerText= F=(9/5)*c+32;
+
+    }
+</script>
+
 </body>
 </html>
